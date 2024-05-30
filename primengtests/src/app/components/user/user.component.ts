@@ -34,7 +34,7 @@ interface City {
 
          <ng-template pTemplate="caption">
         <div class="flex">
-            <p-button label="Clear" icon="pi pi-filter-slash" (click)="clear(dt1)" />
+            <p-button label="Clear" severity="success" icon="pi pi-check" (click)="clear(dt1)" />
             <span class="p-input-icon-left ml-auto">
                 <i class="pi pi-search"></i>
                 <input pInputText type="text"  (input)="dt1.filterGlobal($event.target['value'], 'contains')" placeholder="Search keyword" />
