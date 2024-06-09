@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-shared-ui',
+  selector: 'lib-ui',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './shared-ui.component.html',
-  styleUrl: './shared-ui.component.css',
+  templateUrl: './ui.component.html',
+  styleUrl: './ui.component.css',
 })
-export class SharedUiComponent {}
+export class UiComponent {}

@@ -95,56 +95,6 @@
         "staticFilePath": "dist/apps/primeng/browser",
         "spa": true
       }
-    },
-    "storybook": {
-      "executor": "@storybook/angular:start-storybook",
-      "options": {
-        "port": 4400,
-        "configDir": "apps/primeng/.storybook",
-        "browserTarget": "primeng:build",
-        "compodoc": false
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
-    },
-    "build-storybook": {
-      "executor": "@storybook/angular:build-storybook",
-      "outputs": [
-        "{options.outputDir}"
-      ],
-      "options": {
-        "outputDir": "dist/storybook/primeng",
-        "configDir": "apps/primeng/.storybook",
-        "browserTarget": "primeng:build",
-        "compodoc": false
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
-    },
-    "test-storybook": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "test-storybook -c apps/primeng/.storybook --url=http://localhost:4400"
-      }
-    },
-    "static-storybook": {
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "primeng:build-storybook",
-        "staticFilePath": "dist/storybook/primeng",
-        "spa": true
-      },
-      "configurations": {
-        "ci": {
-          "buildTarget": "primeng:build-storybook:ci"
-        }
-      }
     }
   }
 }
